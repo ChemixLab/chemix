@@ -29,9 +29,9 @@
 				  $("#a").click(function(){
 					$("#pop").show();
 				  });
+			<!-- add -->
 				  $("#add").click(function(){
 					$("#property").show();
-				  });
 				  $("#chem1").click(function(){
 				  $("#x").click(function(){
 					 var images = document.getElementById('a');
@@ -50,23 +50,47 @@
 					 images.src="images/vide3.png";
 					 });
 				  });
-				   $("#transfer").click(function(){
-					document.getElementById("a").style.color = "blue";
+				  $("#chem2").click(function(){
+				  $("#x").click(function(){
+					 var images = document.getElementById('a');
+					 images.src="images/vide4.png";
 					 });
-				  
+				  });
+				})
+			<!-- /add-->
+			<!--remove -->
+				   $("#remove").click(function(){
+					var images = document.getElementById('a');
+					 images.src="images/vide.png";
+					 });
+			<!--/remove -->	
+			<!--reaction -->
+                     $("#reaction").click(function(){			
+					 $("#chem1").click(function(){
+					  $("#x").click(function(){
+					 $("#chem2").click(function(){
+				     $("#x").click(function(){
+					 var images = document.getElementById('a');
+					 images.src="images/vide5.png";
+					 });
+				  });
+				  });
+				  });
+				  });
+			<!-- /reaction-->
 				};
 		</script>
-		
 		<!-- button click -->	
 </head>
 <body>
 <div class="row">
 	<div class="col-md-12" id="pop" style="background-color:gray; height:10%; display:none">
-	 <div class="col-md-2">
+	 <div class="col-md-3">
 	<button type="button" id="add" class="btn btn-info">Add</button>
-	<button type="button" id="transfer" class="btn btn-info">Transfer</button>
+	<button type="button" id="remove" class="btn btn-info">Remove</button>
+	<button type="button" id="reaction" class="btn btn-info">Reaction</button>
 	</div>
-	<div id="property" class="col-md-10" style="background-color:yellow; height:100%; display:none">
+	<div id="property" class="col-md-9" style="background-color:yellow; height:100%; display:none">
 	   <div class="col-md-1">
         <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Volume
         <span class="caret"></span></button>
@@ -123,3 +147,4 @@
     <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
+bhjfioeov
