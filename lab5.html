@@ -1,0 +1,125 @@
+<html>
+<head>
+	<script src="jquery-1.11.1.min.js"></script>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+		<script src="js/jquery-1.9.1.js"></script>
+		<script  src="js/jquery.min.js"></script>
+        <script   src="js/jquery-ui.js"></script>
+	    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css"/>
+		<script src="test/jquery-ui.js"></script>
+		<script>
+
+		function selected_item(clicked_item){
+					$image = clicked_item;
+					$("#dash").after("<b><img id=a src="+$image+" align=center></b>");
+					var coordinates = function(element) {
+					element = $(element);
+					var top = element.position().top;
+					var left = element.position().left;
+					$('#results').text('X: ' + left + ' ' + 'Y: ' + top);
+		            }		
+						 $("#a").draggable({
+						start: function() {
+							coordinates(this);
+						},
+						stop: function() {
+	 				coordinates(this);
+						}
+		          });
+				  $("#a").click(function(){
+					$("#pop").show();
+				  });
+				  $("#add").click(function(){
+					$("#property").show();
+				  });
+				  $("#chem1").click(function(){
+				  $("#x").click(function(){
+					 var images = document.getElementById('a');
+					 images.src="images/vide1.png";
+					 });
+				  });
+				  $("#chem1").click(function(){
+				  $("#y").click(function(){
+					 var images = document.getElementById('a');
+					 images.src="images/vide2.png";
+					 });
+				  });
+				  $("#chem1").click(function(){
+				  $("#z").click(function(){
+					 var images = document.getElementById('a');
+					 images.src="images/vide3.png";
+					 });
+				  });
+				   $("#transfer").click(function(){
+					document.getElementById("a").style.color = "blue";
+					 });
+				  
+				};
+		</script>
+		
+		<!-- button click -->	
+</head>
+<body>
+<div class="row">
+	<div class="col-md-12" id="pop" style="background-color:gray; height:10%; display:none">
+	 <div class="col-md-2">
+	<button type="button" id="add" class="btn btn-info">Add</button>
+	<button type="button" id="transfer" class="btn btn-info">Transfer</button>
+	</div>
+	<div id="property" class="col-md-10" style="background-color:yellow; height:100%; display:none">
+	   <div class="col-md-1">
+        <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Volume
+        <span class="caret"></span></button>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+		  <li role="presentation"><a id="m" role="menuitem" tabindex="-1" >100ml</a></li>
+          <li role="presentation"><a id="x" role="menuitem" tabindex="-1" >200ml</a></li>
+          <li role="presentation"><a id="y" role="menuitem" tabindex="-1" >300ml</a></li>
+          <li role="presentation"><a id="z" role="menuitem" tabindex="-1" >400ml</a></li>
+        </ul>
+      </div>
+	  <div class="col-md-9">
+	<button type="button" id="chem1" class="btn btn-default"  >H2SO4</button>
+	<button type="button" id="chem2" class="btn btn-default">HNO3</button>
+	<button type="button" id="chem3" class="btn btn-default">H2O</button>
+	<button type="button" id="chem4" class="btn btn-default">K2MnO4</button>
+	</div>
+	</div>
+	</div>
+	<div class="col-md-10" style="background-color:red;height:100%;">
+		<div id="dash">
+		</div>
+		<div id="results"></div>
+	</div>
+	<div class="col-md-2" style="background-color:black">
+		<div class="col-md-11">
+			<a href="#" class="thumbnail">
+				<img src="images/vide.png" alt="..." onClick="selected_item(this.src)">
+			</a>
+		</div>
+		<div class="col-md-11">
+			<a href="#" class="thumbnail">
+				<img src="images/vide.png" alt="..." onClick="selected_item(this.src)">
+			</a>
+		</div>
+		<div class="col-md-11">
+			<a href="#" class="thumbnail">
+				<img src="images/vide.png" alt="..." onClick="selected_item(this.src)">
+			</a>
+		</div>
+		<div class="col-md-11">
+			<a href="#" class="thumbnail">
+				<img src="images/vide.png" alt="..." onClick="selected_item(this.src)">
+			</a>
+		</div>
+		
+	</div>
+	
+</div>
+
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
